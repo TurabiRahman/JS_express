@@ -14,6 +14,12 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended : false}));
 
+
+app.use('/api/posts', posts);
+
+
+app.listen(port, () => console.log(`Server is running on port ${port}`));
+
 //app.use(express.static(path.join(__dirname, 'public')))
 
 // app.get('/', (req, res) => {
@@ -23,8 +29,3 @@ app.use(express.urlencoded({extended : false}));
 // app.get('/about', (req, res) => {
 //     res.sendFile(path.join(__dirname, 'public', 'about.html'));
 // });
-
-app.use('/api/posts', posts);
-
-
-app.listen(port, () => console.log(`Server is running on port ${port}`));
