@@ -7,7 +7,7 @@ const port = process.env.PORT || 8080;
 
 
 const app = express();
-app.use(express.urlencoded ());
+app.use(express.json());
 
 app.get('/', (req, res) => {
     res.send('This is the first code with sumit');
@@ -21,7 +21,7 @@ app.post('/', (req, res) => {
 app.param('id', (req, res, next, id) => {
     const user = {
         userId: id,
-        name: `User ${id}`,
+        name: `User ${id + 1}`,
     };
     req.user = user;
     next();     
