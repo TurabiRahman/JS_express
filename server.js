@@ -33,4 +33,12 @@ app.get('/user/:id', (req, res) => {
     res.send(`Welcome to app, user ${userId}!`);
 });
 
+app.set('view engine', 'ejs');
+
+app.get('/about', (req, res) => {
+    res.render('page/about', {
+        name : 'Turabi_Rahman',
+    });
+});
+
 app.listen(port, () => console.log(`Server is running on port ${port}`));
