@@ -39,6 +39,27 @@ app.get('/about', (req, res) => {
     res.render('page/about', {
         name : 'Turabi_Rahman',
     });
+
+    //res.sendStatus(200);
+});
+
+app.get('/contact', (req, res) => {
+    res.format({
+        'text/plain': () => {
+            res.send('HI');
+        },
+        'text/html': () => {
+            res.render('page/about', {
+                name : 'Mizanur Rahman',
+            });
+        },
+        'application/json': () => {
+            res.json({ message: 'You are not around the world' });
+        },
+        default: () => {
+            res.status(406).send('Not Acceptable');
+        }
+    });
 });
 
 app.listen(port, () => console.log(`Server is running on port ${port}`));
