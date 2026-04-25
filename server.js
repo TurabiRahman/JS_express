@@ -62,4 +62,21 @@ app.get('/contact', (req, res) => {
     });
 });
 
+// function logRequest(req, res, next) {
+//     console.log(`${req.method} ${req.url}`);
+//     next();
+// }
+
+//app.use(logRequest);
+const myMiddleware = (req, res, next) => {
+    console.log('This is my custom middleware');
+    next();
+};
+
+app.use(myMiddleware);
+
+app.get('/middleware', (req, res) => {
+    res.send('This route uses custom middleware');
+});
+
 app.listen(port, () => console.log(`Server is running on port ${port}`));
