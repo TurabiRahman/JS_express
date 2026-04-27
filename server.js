@@ -62,18 +62,26 @@ app.get('/contact', (req, res) => {
     });
 });
 
-// function logRequest(req, res, next) {
-//     console.log(`${req.method} ${req.url}`);
-//     next();
-// }
-
-//app.use(logRequest);
 const myMiddleware = (req, res, next) => {
     console.log('This is my custom middleware');
     next();
 };
 
 app.use(myMiddleware);
+
+const logger = (req, res, next) => {
+    console.log(`${req.method} ${req.url}`);
+    next();
+};
+
+
+// function logRequest(req, res, next) {
+//     console.log(`${req.method} ${req.url}`);
+//     next();
+// }
+
+//app.use(logRequest);
+
 
 app.get('/middleware', (req, res) => {
     res.send('This route uses custom middleware');
