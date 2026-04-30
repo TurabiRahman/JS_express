@@ -82,7 +82,6 @@ const logger = (req, res, next) => {
 
 //app.use(logRequest);
 
-
 app.get('/middleware', (req, res) => {
     res.send('This route uses custom middleware');
 });
