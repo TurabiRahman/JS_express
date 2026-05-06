@@ -74,8 +74,6 @@ const logger = (req, res, next) => {
     next();
 };
 
-
-
 // function logRequest(req, res, next) {
 //     console.log(`${req.method} ${req.url}`);
 //     next();
