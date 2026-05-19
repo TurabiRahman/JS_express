@@ -67,6 +67,7 @@ const myMiddleware = (req, res, next) => {
     next();
 };
 
+
 app.use(myMiddleware);
 
 const logger = (req, res, next) => {
