@@ -8,3 +8,6 @@ console.log(z); // Output: "510"
 
 
 
+function add(a, b) {
+    return a + b;
+}
