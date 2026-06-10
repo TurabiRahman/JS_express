@@ -21,3 +21,6 @@ const car = {
         console.log("Car started");
     }
 };  
+
+let text ='my name is "Turabi Rahman" your lord commande';
+console.log(text);
