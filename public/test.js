@@ -24,3 +24,15 @@ const car = {
 
 let text ='my name is "Turabi Rahman" your lord commande';
 console.log(text);
+
+console.log(parseInt("10.33 20 30"));  // Output: 10 
+
+
+const fruits = ["apple", "banana", "cherry"];
+
+function printFruits(value) 
+{    
+   console.log(value);
+}   
+
+fruits.forEach(printFruits);
