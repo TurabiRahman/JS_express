@@ -47,3 +47,17 @@ const cars = [
 cars.sort();
 
 console.log(cars);
+
+
+const numbers = [40, 100, 1, 5, 25, 10];
+
+function myFunction(value, index, array) 
+{
+    console.log(value);
+    console.log(index);
+    console.log(array);
+}
+
+numbers.forEach(myFunction);
+
+console.log(Array.from("ABCDEFG")); // Output: ["A", "B", "C", "D", "E", "F", "G"]
