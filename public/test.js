@@ -66,3 +66,20 @@ console.log(Array.from("ABCDEFG")); // Output: ["A", "B", "C", "D", "E", "F", "G
 let age = 18;
 console.log(age >= 18 ? (age < 30) ? "You are an adult." : "You are a minor." : "you are a minor.");
 
+const person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+};
+
+for(let x in person) 
+{
+    console.log(person[x]);
+}
+
+let name = "John"; 
+
+for(let x of name)
+{
+    console.log(x);
+}
