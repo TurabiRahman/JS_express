@@ -61,3 +61,8 @@ function myFunction(value, index, array)
 numbers.forEach(myFunction);
 
 console.log(Array.from("ABCDEFG")); // Output: ["A", "B", "C", "D", "E", "F", "G"]
+
+
+let age = 18;
+console.log(age >= 18 ? (age < 30) ? "You are an adult." : "You are a minor." : "you are a minor.");
+
