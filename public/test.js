@@ -83,3 +83,14 @@ for(let x of name)
 {
     console.log(x);
 }
+
+// List all Elements
+const letters = new Set(["a","b","c"]);
+
+let textt = "";
+
+for (let x of letters) {
+  textt += x;
+}
+
+console.log(textt); // Output: "abc"
