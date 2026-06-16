@@ -94,3 +94,6 @@ for (let x of letters) {
 }
 
 console.log(textt); // Output: "abc"
+
+
+
