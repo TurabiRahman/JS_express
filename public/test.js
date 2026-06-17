@@ -96,4 +96,11 @@ for (let x of letters) {
 console.log(textt); // Output: "abc"
 
 
+console.log("john".constructor); // Output: ƒ String() { [native code] }
 
+
+function is_Array(myArray) {
+    return myArray.constructor.toString().indexOf("Array") > -1;
+}   
+
+console.log(is_Array([1, 2, 3])); // Output: true
