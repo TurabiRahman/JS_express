@@ -665,4 +665,22 @@ let y = "John";   // y is a string
 
 let x = + y;      // x is a number (NaN)
 
+Automatic Type Conversion
+When JavaScript tries to operate on a "wrong" data type, it will try to convert the value to a "right" type.
+
+The result is not always what you expect:
+
+5 + null    // returns 5         because null is converted to 0
+"5" + null  // returns "5null"   because null is converted to "null"
+"5" + 2     // returns "52"      because 2 is converted to "2"
+"5" - 2     // returns 3         because "5" is converted to 5
+"5" * "2"   // returns 10        because "5" and "2" are converted to 5 and 2
+
+document.getElementById("demo").innerHTML = myVar;
+
+// if myVar = {name:"Fjohn"}  // toString converts to "[object Object]"
+// if myVar = [1,2,3,4]       // toString converts to "1,2,3,4"
+// if myVar = new Date()      // toString converts to "Fri Jul 18 2014 09:08:55 GMT+0200"
+
+
 From <[https://www.w3schools.com/js/js_type_conversion.asp](https://www.w3schools.com/js/js_type_conversion.asp)>
