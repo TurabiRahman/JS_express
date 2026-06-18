@@ -637,3 +637,32 @@ null === undefined    // false
 null == undefined     // true
 
 From <[https://www.w3schools.com/js/js_typeof.asp](https://www.w3schools.com/js/js_typeof.asp)>
+
+1. Type Conversion :-
+
+|   |   |
+|---|---|
+|Method|Description|
+|Number()|Returns a number, converted from its argument|
+|parseFloat()|Parses a string and returns a floating point number|
+|parseInt()|Parses a string and returns an integer|
+
+The Unary + Operator
+
+The unary + operator can be used to convert a variable to a number:
+
+Example
+
+let y = "5";      // y is a string
+
+let x = + y;      // x is a number
+
+If the variable cannot be converted, it will still become a number, but with the value NaN (Not a Number):
+
+Example
+
+let y = "John";   // y is a string
+
+let x = + y;      // x is a number (NaN)
+
+From <[https://www.w3schools.com/js/js_type_conversion.asp](https://www.w3schools.com/js/js_type_conversion.asp)>
