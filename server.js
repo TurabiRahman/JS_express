@@ -2,12 +2,13 @@ import 'dotenv/config';
 
 import express from 'express';
 
-
 const port = process.env.PORT || 8080;
-
 
 const app = express();
 app.use(express.json());
+
+app.use(express.static('public/'));
+
 
 app.get('/', (req, res) => {
     res.send('This is the first code with sumit');
@@ -17,6 +18,9 @@ app.post('/', (req, res) => {
     console.log(typeof req.body);
     res.send('Data received successfully');
 }); 
+
+
+app.listen(port, () => console.log(`✅ Server is running on port ${port}`));
 
 // app.param('id', (req, res, next, id) => {
 //     const user = {
@@ -90,5 +94,3 @@ app.post('/', (req, res) => {
 // app.get('/middleware', (req, res) => {
 //     res.send('This route uses custom middleware');
 // });
-
-app.listen(port, () => console.log(`Server is running on port ${port}`));
