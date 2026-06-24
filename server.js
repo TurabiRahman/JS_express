@@ -1,12 +1,15 @@
 import 'dotenv/config';
 
 import express from 'express';
+import cookieParser from 'cookie-parser';
 
 const port = process.env.PORT || 8080;
 
 const app = express();
 app.set('view engine', 'ejs');
 app.use(express.json());
+app.use(cookieParser());
+
 
 app.use(express.static('public/'));
 
@@ -32,7 +35,8 @@ app.param('id', (req, res, next, id) => {
 app.get('/user/:id', (req, res) => {
     //console.log(typeof req.params.id);
     const userId = req.params.id;
-    console.log(req.user);          
+    //console.log(req.user);
+    console.log(req.cookies);          
     res.send(`Welcome to app, user ${userId}!`);
 });
 
