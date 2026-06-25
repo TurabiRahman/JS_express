@@ -11,6 +11,14 @@ app.use(express.json());
 app.use(cookieParser());
 
 
+const logger = (req, res, next) => {
+    console.log(`${new Date(Date.now()).toLocaleString()} - ${req.method} - ${req.url} - ${req.protocol} - ${req.ip}`);
+    next();
+}
+
+app.use(logger);
+
+
 app.use(express.static('public/'));
 
 
@@ -68,7 +76,22 @@ app.get('/about', (req, res) => {
     });
 });
 
+const myMiddleware1 = (req, res, next) => {
+    console.log('This is my custom middleware number 01');
+    next();
+};
 
+const myMiddleware2 = (req, res, next) => {
+    console.log('This is my custom middleware number 02');
+    next();
+};
+
+app.use(myMiddleware1);
+app.use(myMiddleware2);
+
+app.get('/middleware', (req, res) => {
+    res.send('This route uses custom middleware');
+});
 
 app.listen(port, () => console.log(`✅ Server is running on port ${port}`));
 
@@ -80,14 +103,7 @@ app.listen(port, () => console.log(`✅ Server is running on port ${port}`));
 
 
 
-// const myMiddleware = (req, res, next) => {
-//     console.log('This is my custom middleware');
-//     next();
-// };
 
-
-
-// app.use(myMiddleware);
 
 // const logger = (req, res, next) => {
 //     console.log(`${req.method} ${req.url}`);
