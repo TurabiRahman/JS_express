@@ -40,9 +40,14 @@ router.get('/:id', (req, res) => {
 //create new post
 
 router.post('/', (req, res) => {
-    console.log(req.body);
+    const { title } = req.body;
+    const newPost = {
+        id: posts.length > 0 ? Math.max(...posts.map(p => p.id)) + 1 : 1,
+        title
+    };
+    posts.push(newPost);
+    res.status(201).json(newPost);
+});
 
-    res.status(201).json(posts);
-})
 
 export default router;
