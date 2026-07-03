@@ -37,18 +37,18 @@ project01_test=# \d
 ex - 
 
 project01_test=# \d person
-                         Table "public.person"
+                                                     Table "public.person"
     Column     |         Type          | Collation | Nullable | Default
 ---------------+-----------------------+-----------+----------+---------
- id                    | integer                       |           |          |
- first_name      | character varying(50) |           |          |
- last_name       | character varying(52) |           |          |
- gender            | character varying(7)  |           |          |
- date_of_birth  | date                            |           |          |
+ id                    | integer                       |                 |                |
+ first_name      | character varying(50) |                 |                |
+ last_name       | character varying(52) |                 |                |
+ gender            | character varying(7)  |                 |                |
+ date_of_birth  | date                            |                 |               |
 
 9. Creating table with constrains 
 = create table table_name (
 column name   data type   constrains if any  
 )
 
-constrain = 
+constrain = not null / null / primary key 
