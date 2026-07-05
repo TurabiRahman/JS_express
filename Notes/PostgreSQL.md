@@ -52,3 +52,6 @@ column name   data type   constrains if any
 )
 
 constrain = not null / null / primary key 
+
+
+
