@@ -53,4 +53,5 @@ column name   data type   constrains if any
 
 constrain = not null / null / primary key 
 
-
+8. drop table table_name = to drop the table 
+9. SELECT * FROM table_name = to see all the values in the table
