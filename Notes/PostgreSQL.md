@@ -71,4 +71,27 @@ like this
 19. select * from human offset 5 fetch first 10 row only; 
 = this "fetch first 10 row only" is like limit 10
 20. between , in
-21. 
+21. where first_name like '%urab%'; = like 
+22. there is another keyword ilike / ILIKE . these also works as same as 'like' but if we search for uppercase and  search for lowercase then 'like' will not work, in these cases 'ilike' works because it makes the search insensitive <>\
+23. group by
+24. group by having 
+25. select max(price) from car;
+26. select min(price) from car;
+27. select avg(price) from car;
+28. select round(avg(price), 2) from car;
+29. select sum(price) from car;
+30. select round(avg(price), 2) as average from car;
+31. select coalesce(gender, 'not provided gender') from person;
+32. select nullif(10, 1);
+33. select now(); = to see the current time and date
+34. select now() :: date; = see only date
+35. select now() :: time; = see only time
+36. select now() - interval '1 year'; = gives us time cutting down the interval
+37. select now() + interval '10 year';
+38. select (now() + interval '10 year') :: date;
+39. select extract(year from now()); = by this we can extract any single item from now() year/date/day/dow - day of week/century 
+40. select first_name, gender, age(now(), date_of_birth) as age from human; = to calculate the actual age now
+41. Alter table human add constraint unique_email_address unique(email);
+42. delete from person where id = 1004;
+43. alter table human drop constraint unique_email_address;
+44. alter table human add constraint gender_constraint check (gender ='Male' or gender = 'Female' );
