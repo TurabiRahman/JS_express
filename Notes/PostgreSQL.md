@@ -95,3 +95,12 @@ like this
 42. delete from person where id = 1004;
 43. alter table human drop constraint unique_email_address;
 44. alter table human add constraint gender_constraint check (gender ='Male' or gender = 'Female' );
+45. update table_name set .... where ....;
+46. think of a scenario, we want to add a value with same primary key id existing in our table . obviously it would give us error. so in some cases if i want user to not see any error message, and i will not insert the duplicate value there comes "on conflict do nothing" command  
+    ---> insert into table_name values(...) on conflict (primary_key) do nothing
+47. but if we want to do something like we want to take the reassigned value as an update then we can use on conflict do update like this 
+    ---> insert into table_name values(...) on conflict (primary_key) do update set name_of_the_coloum_which_is_being_updated = excluded.email;
+    ---> we can do it for any number of colomn by using "," like
+    insert into table_name values(...) on conflict (primary_key) do update set name_of_the_coloum_which_is_being_updated = excluded.email, first_name
+48. Inner Join
+49. Left Join
