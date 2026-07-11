@@ -104,3 +104,6 @@ like this
     insert into table_name values(...) on conflict (primary_key) do update set name_of_the_coloum_which_is_being_updated = excluded.email, first_name
 48. Inner Join
 49. Left Join
+50.  **** \copy (select * from person) to 'C:/Users/USERAS/Downloads/result.csv' delimiter ',' csv header;
+    = to export query results to csv ** 
+51. 
