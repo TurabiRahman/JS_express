@@ -106,4 +106,14 @@ like this
 49. Left Join
 50.  **** \copy (select * from person) to 'C:/Users/USERAS/Downloads/result.csv' delimiter ',' csv header;
     = to export query results to csv ** 
-51. 
+51. select nextval('human_id_seq'::regclass); = this gives us the next value of the primary key declared with type bigserial
+52. alter sequence human_id_seq restart with 10/any number = to restart the bigserial sequence from any number that system demands
+53. select * from pg_available_extensions; = to see available extensions
+54. create extension if not exists "uuid-ossp"; = to install an extension
+55. Ctrl + shift + f to open search bar into a terminal;
+56. \df = list of all functions
+57. select uuid_generate_v4(); = to invoke the function and see the unique primary key is is giving
+58. how to use uuid 
+    ![[Pasted image 20260712214746.png]]
+59. \x to enable or disable expanded display
+60. 
