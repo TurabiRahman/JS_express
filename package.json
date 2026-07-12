@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server",
+    "start": "node api.js && node server",
     "production": "cross-env NODE_ENV=production node server",
-    "dev": "nodemon server"
+    "dev": "node api.js && nodemon server"
   },
   "keywords": [],
   "author": "",
